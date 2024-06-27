@@ -1,0 +1,309 @@
+/* Reset and basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Navigation */
+#navbar {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Slides */
+.slides-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Default color */
+}
+
+.slide h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Default color */
+}
+
+.highlight {
+  color: #ff4500; /* Highlight color */
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Slide-specific background colors */
+.slide1 {
+  background-color: #f0f0f0; /* Light grey */
+}
+
+.slide2 {
+  background-color: #e6f7ff; /* Light blue */
+}
+
+.slide3 {
+  background-color: #f0e6ff; /* Light purple */
+}
+
+.slide4 {
+  background-color: #e6f7f2; /* Light green */
+}
+
+.slide5 {
+  background-color: #fff5e6; /* Light orange */
+}
+
+/* Experience and Project sections */
+.experience-container, .project-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.experience-item, .project-tile {
+  flex: 1 1 300px; /* Adjust width as per your layout */
+  padding: 20px;
+  background-color: #fff; /* Box background color */
+  border-radius: 8px;
+  margin: 0 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experience-item h2, .project-tile h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #008080; /* Heading color */
+  margin-bottom: 10px;
+}
+
+.experience-item .date {
+  color: #ff6347; /* Date color */
+  margin-bottom: 10px;
+}
+
+.experience-item ul, .project-tile p {
+  margin-top: 10px;
+}
+
+.experience-item:hover, .project-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section */
+.contact-links {
+  margin-top: 30px;
+}
+
+.contact-links .btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: black; /* Button background color */
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  
+}
+
+.contact-links .btn:hover {
+  background-color: lightskyblue/* Button hover background color */
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .experience-item, .project-tile {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .slide h1 {
+    font-size: 2.5rem;
+  }
+  .slide h2 {
+    font-size: 1.8rem;
+  }
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* Education section */
+.education-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.education-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex: 1 1 calc(45% - 40px); /* Adjust width to fit two items side by side */
+  max-width: calc(45% - 40px); /* Adjust width to fit two items side by side */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 20px; /* Add margin between boxes */
+}
+
+.education-item:last-child {
+  margin-right: 0; /* Remove margin from last item to prevent extra space */
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-item h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #008080; /* Heading color */
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  margin-top: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .education-item {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .education-item {
+    flex: 1 1 calc(100% - 40px);
+    max-width: calc(100% - 40px);
+    margin-right: 0; /* Ensure no margin on smaller screens where items stack */
+  }
+}
+
+
+/* Scroll icons */
+.scroll-btn {
+  position: fixed;
+  bottom: 40px; /* Adjusted position to avoid merging with footer */
+  right: 20px;
+  width: 30px; /* Reduced width */
+  height: 30px; /* Reduced height */
+  background-color: #007bff; /* Button background color */
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-btn i {
+  font-size: 1rem; /* Reduced icon size */
+}
+
+#scroll-up {
+  bottom: 80px; /* Adjust position for the up arrow */
+}
+
+#scroll-down {
+  bottom: 40px; /* Adjust position for the down arrow */
+}
+
